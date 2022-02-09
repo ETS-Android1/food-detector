@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PredictionResult">
+
+    <TextView
+        android:id="@+id/preditction_results_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/prediction_results"
+        android:fontFamily="@font/nunito_extrabold"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/confirm_photo_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/predicted_image"
+        app:layout_constraintBottom_toTopOf="@+id/food_label1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/preditction_results_text"
+        tools:ignore="ImageContrastCheck"
+        tools:src="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/back_to_main_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="@string/back_to_main_menu"
+        android:textColor="@color/white"
+        android:fontFamily="@font/nunito_extrabold"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:background="@drawable/button_primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/bar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/food_label2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        android:max="100"
+        android:progress="90"
+        android:background="@color/gray"
+        android:progressDrawable="@drawable/bar_prediction"
+        />
+
+    <TextView
+        android:id="@+id/food_label1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/nunito"
+        android:text="Pancakes"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/bar1"
+        app:layout_constraintStart_toStartOf="@+id/bar1" />
+
+    <TextView
+        android:id="@+id/food_probability1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/nunito"
+        android:text="90%"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/bar1"
+        app:layout_constraintEnd_toEndOf="@+id/bar1" />
+
+    <ProgressBar
+        android:id="@+id/bar2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/food_label3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        android:max="100"
+        android:progress="20"
+        android:background="@color/gray"
+        android:progressDrawable="@drawable/bar_others"/>
+
+    <TextView
+        android:id="@+id/food_label2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/nunito"
+        android:text="Pancakes"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/bar2"
+        app:layout_constraintStart_toStartOf="@+id/bar2" />
+
+    <TextView
+        android:id="@+id/food_probability2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/nunito"
+        android:text="90%"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/bar2"
+        app:layout_constraintEnd_toEndOf="@+id/bar2" />
+
+    <ProgressBar
+        android:id="@+id/bar3"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/food_label4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        android:max="100"
+        android:progress="10"
+        android:background="@color/gray"
+        android:progressDrawable="@drawable/bar_others"/>
+
+    <TextView
+        android:id="@+id/food_label3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/nunito"
+        android:text="Pancakes"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/bar3"
+        app:layout_constraintStart_toStartOf="@+id/bar3" />
+
+    <TextView
+        android:id="@+id/food_probability3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/nunito"
+        android:text="90%"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/bar3"
+        app:layout_constraintEnd_toEndOf="@+id/bar3" />
+
+    <ProgressBar
+        android:id="@+id/bar4"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/food_label5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        android:max="100"
+        android:progress="5"
+        android:background="@color/gray"
+        android:progressDrawable="@drawable/bar_others"/>
+
+    <TextView
+        android:id="@+id/food_label4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/nunito"
+        android:text="Pancakes"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/bar4"
+        app:layout_constraintStart_toStartOf="@+id/bar4" />
+
+    <TextView
+        android:id="@+id/food_probability4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/nunito"
+        android:text="90%"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/bar4"
+        app:layout_constraintEnd_toEndOf="@+id/bar4" />
+
+    <ProgressBar
+        android:id="@+id/bar5"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/back_to_main_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        android:max="100"
+        android:progress="2"
+        android:background="@color/gray"
+        android:progressDrawable="@drawable/bar_others"/>
+
+    <TextView
+        android:id="@+id/food_probability5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/nunito"
+        android:text="90%"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/bar5"
+        app:layout_constraintEnd_toEndOf="@+id/bar5" />
+
+    <TextView
+        android:id="@+id/food_label5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/nunito"
+        android:text="Pancakes"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/bar5"
+        app:layout_constraintStart_toStartOf="@+id/bar5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    tools:context=".MainMenu">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/nunito_extrabold"
+        android:text="@string/how_you_want_to_select_an_image"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/camera_button"
+        android:layout_width="280dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="130dp"
+        app:cardBackgroundColor="@color/blue_100"
+        app:cardCornerRadius="18dp"
+        app:contentPaddingLeft="20dp"
+        app:contentPaddingTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/text_camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito"
+            android:text="@string/camera"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/text_camera_desc"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:layout_gravity="bottom|start"
+            android:fontFamily="@font/nunito"
+            android:text="@string/take_image_with_device_s_built_in_camera"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:paddingTop="10dp"
+            android:layout_marginBottom="10dp"
+            tools:layout_editor_absoluteX="-163dp"
+            tools:layout_editor_absoluteY="153dp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/local_storage_button"
+        android:layout_width="280dp"
+        android:layout_height="110dp"
+        app:cardBackgroundColor="@color/blue_100"
+        app:cardCornerRadius="18dp"
+        app:contentPaddingLeft="20dp"
+        app:contentPaddingTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/url_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/camera_button">
+
+        <TextView
+            android:id="@+id/text_local_storage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito"
+            android:text="@string/local_storage"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/text_local_storage_desc"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_gravity="bottom|start"
+            android:fontFamily="@font/nunito"
+            android:paddingTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/select_an_image_saved_in_device"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteX="-163dp"
+            tools:layout_editor_absoluteY="153dp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/url_button"
+        android:layout_width="280dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="40dp"
+        app:cardBackgroundColor="@color/blue_100"
+        app:cardCornerRadius="18dp"
+        app:contentPaddingLeft="20dp"
+        app:contentPaddingTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/text_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito"
+            android:text="@string/url"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/text_url_desc"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_gravity="bottom|start"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/nunito"
+            android:paddingTop="10dp"
+            android:text="@string/paste_a_link_to_the_image_on_the_internet"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteX="-163dp"
+            tools:layout_editor_absoluteY="153dp" />
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

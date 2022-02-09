@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">FoodDetector</string>
+    <string name="onboarding_1">Welcome to the Food Detector. It’s an revolutionary application that can recognise a dish based on it’s foto.</string>
+    <string name="step_1_of_2">Step 1 of 2</string>
+    <string name="next">Next</string>
+    <string name="step_2_of_2">Step 2 of 2</string>
+    <string name="text2">Machine learnig model used in this app was trained on food 101 data set. List of recognised foods is available in Github repo of this app.</string>
+    <string name="go_to_main_menu">Go to main menu</string>
+    <string name="camera">Camera</string>
+    <string name="take_image_with_device_s_built_in_camera">Take image with device’s built in camera.</string>
+    <string name="local_storage">Local Storage</string>
+    <string name="select_an_image_saved_in_device">Select an image saved in device.</string>
+    <string name="url">URL</string>
+    <string name="paste_a_link_to_the_image_on_the_internet">Paste a link to the image on the internet.</string>
+    <string name="how_you_want_to_select_an_image">How you want to select an image?</string>
+    <string name="are_you_happy_with_this_photo">Are you happy with this photo?</string>
+    <string name="photo_preview">Photo preview</string>
+    <string name="yes_proceed">Yes, proceed.</string>
+    <string name="no_i_want_to_take_photo_once_again">No, I want to take photo once again.</string>
+    <string name="image_url">Image url</string>
+    <string name="paste_a_link_to_image_in_a_field_below">Paste a link to image in a field below.</string>
+    <string name="upload_url">Upload URL</string>
+    <string name="no_i_want_to_provide_different_url"><![CDATA[No, I want to provide different URL]]></string>
+    <string name="prediction_results">Prediction results</string>
+    <string name="back_to_main_menu">Back to main menu</string>
+    <string name="predicted_image">Predicted image</string>
+    <string name="no_i_want_to_pick_different_photo">No, I want to pick different photo.</string>
+    <string name="camera_permission_denied">"Without this permission app won't be able to read photo taken by the camera."</string>
+    <string name="local_permission_denied">"Without this permission app won't be able to read photos saved in device and."</string>
+    <string name="feature_unavailable">"This feature won't be available until you grant required permission.</string>
+    <string name="connection_failed">"Connection failed. Your internet connection is unavailable or perhaps servers were blown up."</string>
+
+</resources>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/onboarding1">
+    <fragment
+        android:id="@+id/onboarding1"
+        android:name="lukaszb.food.detector.fooddetector.Onboarding1"
+        android:label="fragment_onboarding1"
+        tools:layout="@layout/fragment_onboarding1">
+        <action
+            android:id="@+id/action_onboarding1_to_onboarding2"
+            app:destination="@id/onboarding2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboarding2"
+        android:name="lukaszb.food.detector.fooddetector.Onboarding2"
+        android:label="fragment_onboarding2"
+        tools:layout="@layout/fragment_onboarding2" >
+        <action
+            android:id="@+id/action_onboarding2_to_mainMenu"
+            app:destination="@id/mainMenu"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainMenu"
+        android:name="lukaszb.food.detector.fooddetector.MainMenu"
+        android:label="fragment_main_menu"
+        tools:layout="@layout/fragment_main_menu" >
+        <action
+            android:id="@+id/action_mainMenu_to_confirmPhoto"
+            app:destination="@id/confirmPhoto"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_mainMenu_to_urlForm"
+            app:destination="@id/urlForm"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_mainMenu_to_confirmPhotoLocalStorage"
+            app:destination="@id/confirmPhotoLocalStorage" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/confirmPhoto"
+        android:name="lukaszb.food.detector.fooddetector.ConfirmPhotoCamera"
+        android:label="fragment_confirm_photo"
+        tools:layout="@layout/fragment_confirm_photo_camera" >
+        <argument
+            android:name="uri"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_confirmPhoto_to_predictionResult"
+            app:destination="@id/predictionResult" />
+    </fragment>
+    <fragment
+        android:id="@+id/urlForm"
+        android:name="lukaszb.food.detector.fooddetector.UrlForm"
+        android:label="fragment_url_form"
+        tools:layout="@layout/fragment_url_form" >
+        <action
+            android:id="@+id/action_urlForm_to_confirmPhotoUrl"
+            app:destination="@id/confirmPhotoUrl"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmPhotoUrl"
+        android:name="lukaszb.food.detector.fooddetector.ConfirmPhotoUrl"
+        android:label="fragment_confirm_photo_url"
+        tools:layout="@layout/fragment_confirm_photo_url" >
+        <argument
+            android:name="url"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_confirmPhotoUrl_to_urlForm"
+            app:destination="@id/urlForm" />
+        <action
+            android:id="@+id/action_confirmPhotoUrl_to_predictionResult"
+            app:destination="@id/predictionResult"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/predictionResult"
+        android:name="lukaszb.food.detector.fooddetector.PredictionResult"
+        android:label="fragment_prediction_result"
+        tools:layout="@layout/fragment_prediction_result" >
+        <action
+            android:id="@+id/action_predictionResult_to_mainMenu"
+            app:destination="@id/mainMenu" />
+        <argument
+            android:name="url"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="food_names"
+            app:argType="string[]" />
+        <argument
+            android:name="percentages"
+            app:argType="integer[]" />
+        <argument
+            android:name="uri"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmPhotoLocalStorage"
+        android:name="lukaszb.food.detector.fooddetector.ConfirmPhotoLocalStorage"
+        android:label="fragment_confirm_photo_local_storage"
+        tools:layout="@layout/fragment_confirm_photo_local_storage" >
+        <argument
+            android:name="uri"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_confirmPhotoLocalStorage_to_predictionResult"
+            app:destination="@id/predictionResult" />
+    </fragment>
+</navigation>
