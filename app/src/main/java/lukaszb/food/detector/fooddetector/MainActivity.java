@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String API_URL = "http://34.68.160.234:6000/";
+    public static final String API_URL = "http://34.135.95.60:6000/";
 
 
     @Override
